@@ -3,8 +3,8 @@
 <!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
   <info>
     <title>WU Master Management</title>
-    <id>http://www.zotero.org/styles/wu-master-management</id>
-    <link rel="self" href="http://www.zotero.org/styles/wu-master-management"/>
+    <id>https://raw.githubusercontent.com/georgd/wu-citation-styles/master/Master%20Management/wu-master-management.csl</id>
+    <link rel="self" href="https://raw.githubusercontent.com/georgd/wu-citation-styles/master/Master%20Management/wu-master-management.csl"/>
     <link href="http://www.zotero.org/styles/apa" rel="template"/>
     <author>
       <name>Georg Duffner</name>
@@ -46,6 +46,7 @@
         <multiple>trans.</multiple>
       </term>
       <term name="anonymous">No author</term>
+      <!-- This should be term name="of" -->
       <term name="ad">of</term>
       <term name="presented at">Paper presented at the</term>
     </terms>
@@ -563,6 +564,7 @@
           <choose>
             <if type="article-newspaper">
               <group prefix=" " delimiter=" ">
+                <!-- This should be text term="of" -->
                 <text term="ad"/>
                 <date variable="issued" form="text"/>
               </group>
