@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style class="in-text" version="1.0" name-delimiter="/" et-al-min="4" et-al-use-first="3" et-al-subsequent-min="4" et-al-subsequent-use-first="3" initialize="false" initialize-with="." demote-non-dropping-particle="never" xmlns="http://purl.org/net/xbiblio/csl">
+<!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
+  <info>
+    <title>WU PMBA Sozialmanagement</title>
+    <id>https://raw.githubusercontent.com/georgd/wu-citation-styles/master/PMBA%20Sozialmanagement/wu-pmba-sozialmanagement.csl</id>
+    <link rel="self" href="https://raw.githubusercontent.com/georgd/wu-citation-styles/master/PMBA%20Sozialmanagement/wu-pmba-sozialmanagement.csl"/>
+    <link rel="independent-parent" href="https://raw.githubusercontent.com/georgd/wu-citation-styles/master/Master%20Management/wu-master-management.csl"/>
+    <author>
+      <name>Georg Duffner</name>
+      <email>georg.duffner@wu.ac.at</email>
+      <uri>http://wu.ac.at/library</uri>
+    </author>
+    <category citation-format="author-date"/>
+    <category field="social_science"/>
+    <summary>Citation style for WU Vienna’s PMBA Sozialmanagement. This is an alias for the style wu-masger-management.</summary>
+    <updated>2015-12-17T16:08:19+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+</style>
