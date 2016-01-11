@@ -6,7 +6,7 @@ Der Zitierstil für Zotero und Mendeley basiert auf dem Stil [APA](http://www.zo
 
 ## Installation in Zotero
 
-Nach dem Download der csl-Datei unter *Einstellungen* > *Zitieren* > *Stile* auf [+] klicken und die heruntergeladene Datei öffnen.
+Der Zitierstil befindet sich im offiziellen Style-Repository von Zotero: unter *Einstellungen* > *Zitieren* > *Stile* auf »Weitere Stile hinzufügen« klicken und auf der Seite den Stil »Wirtschaftsuniversität Wien - Master Management« auswählen. Im Dialogfenster auf *Installieren* klicken.
 
 ## Hinweise zur Benützung
 
