@@ -2,19 +2,20 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" name-delimiter="/" demote-non-dropping-particle="never" default-locale="de-AT">
 <!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
   <info>
-    <title>Wirtschaftsuniversität Wien - Handel und Marketing</title>
+    <title>Wirtschaftsuniversität Wien - Handel und Marketing (German - Austria)</title>
     <title-short>WU H&amp;M</title-short>
     <id>http://www.zotero.org/styles/wirtschaftsuniversitat-wien-handel-und-marketing</id>
     <link href="http://www.zotero.org/styles/wirtschaftsuniversitat-wien-handel-und-marketing" rel="self"/>
-    <link href="http://www.zotero.org/styles/elsevier-harvard" rel="template"/>
     <link href="https://learn.wu.ac.at/bibliothek/literaturverwaltung" rel="documentation"/>
+    <link href="https://www.wu.ac.at/fileadmin/wu/d/i/retail/PDF_Dokumente/Bachelor/HM_Zitiervorschriften_Juni2016.pdf" rel="documentation"/>
     <author>
       <name>Georg Duffner</name>
       <email>georg.duffner@wu.ac.at</email>
     </author>
-    <category citation-format="author-date" field="social_science"/>
-    <summary>Citation style for WU Vienna’s Institute for Retailing &amp;amp; Marketing.</summary>
-    <updated>2016-09-23T12:15:47+00:00</updated>
+    <category citation-format="author-date"/>
+    <category field="social_science"/>
+    <summary>Citation style for WU Vienna’s Institute for Retailing &amp; Marketing.</summary>
+    <updated>2016-09-27T03:54:13+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="de">
@@ -39,13 +40,13 @@
           <text variable="collection-title" text-case="title"/>
         </group>
       </if>
-      <else-if type="bill book graphic legal_case legislation motion_picture report song" match="any">
-        <group prefix=", " delimiter=", ">
+      <else-if type="book graphic legal_case motion_picture report song" match="any">
+        <group delimiter=", ">
           <text variable="container-title"/>
           <text variable="collection-title"/>
         </group>
       </else-if>
-      <if type="article-journal article-magazine article-newspaper article" match="any">
+      <else-if type="article-journal article-magazine article-newspaper article" match="any">
         <group delimiter=", ">
           <group delimiter=": ">
             <text term="in" text-case="capitalize-first"/>
@@ -60,7 +61,26 @@
           </group>
           <text variable="page"/>
         </group>
-      </if>
+      </else-if>
+      <else-if type="bill legislation" match="any">
+        <group delimiter=" ">
+          <group delimiter=", ">
+            <group delimiter=" ">
+              <text variable="container-title"/>
+              <text variable="volume"/>
+              <group delimiter="/">
+                <text variable="number"/>
+                <date date-parts="year" form="numeric" variable="issued"/>
+              </group>
+            </group>
+            <text variable="page"/>
+          </group>
+          <group delimiter=" ">
+            <text value="in der Fassung"/>
+            <text variable="references"/>
+          </group>
+        </group>
+      </else-if>
       <else>
         <group delimiter=", ">
           <text variable="container-title"/>
@@ -76,6 +96,9 @@
       <substitute>
         <names variable="editor"/>
         <names variable="translator"/>
+        <group>
+          <text variable="title-short"/>
+        </group>
         <group>
           <text term="anonymous" form="short"/>
         </group>
@@ -204,10 +227,10 @@
         </group>
       </else-if>
       <else-if type="patent">
-        <text variable="number" prefix=". "/>
+        <text variable="number"/>
       </else-if>
       <else-if type="thesis" match="any">
-        <group delimiter=". " prefix=". ">
+        <group delimiter=". ">
           <text macro="publisher"/>
           <text variable="genre"/>
         </group>
@@ -220,7 +243,21 @@
   <macro name="author-year-title">
     <group delimiter=": ">
       <group>
-        <text macro="author"/>
+        <choose>
+          <if type="bill" match="any">
+            <choose>
+              <if match="none" variable="author editor">
+                <text variable="title-short"/>
+              </if>
+              <else>
+                <text macro="author"/>
+              </else>
+            </choose>
+          </if>
+          <else>
+            <text macro="author"/>
+          </else>
+        </choose>
         <text macro="issued" prefix=" (" suffix=")"/>
       </group>
       <group>
@@ -236,7 +273,14 @@
     <layout prefix="(" suffix=")" delimiter="; ">
       <group delimiter=", ">
         <group delimiter=" ">
-          <text macro="author-short"/>
+          <choose>
+            <if type="legislation" match="any">
+              <text variable="title-short"/>
+            </if>
+            <else>
+              <text macro="author-short"/>
+            </else>
+          </choose>
           <text macro="issued"/>
         </group>
         <group delimiter=" ">
@@ -250,6 +294,7 @@
     <sort>
       <key macro="author"/>
       <key macro="issued" sort="descending"/>
+      <key macro="title"/>
     </sort>
     <layout suffix=".">
       <group delimiter=". ">
