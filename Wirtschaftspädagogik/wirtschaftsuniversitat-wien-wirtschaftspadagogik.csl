@@ -15,7 +15,7 @@
     <category citation-format="author-date"/>
     <category field="social_science"/>
     <summary>Citation style for WU Vienna’s Institute for Business Education.</summary>
-    <updated>2016-12-21T10:14:06+00:00</updated>
+    <updated>2016-12-22T07:56:25+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="de">
@@ -381,7 +381,7 @@
   <macro name="u__magazine-locators">
     <group delimiter=", ">
       <group delimiter=" ">
-        <text term="number" form="short"/>
+        <text value="Nr."/>
         <group delimiter="/">
           <text variable="issue"/>
           <date date-parts="year" form="text" variable="issued"/>
