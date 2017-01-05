@@ -15,7 +15,7 @@
     <category citation-format="author-date"/>
     <category field="social_science"/>
     <summary>Citation style for WU Vienna’s Institute for Business Education.</summary>
-    <updated>2017-01-04T11:48:36+00:00</updated>
+    <updated>2017-01-05T15:27:44+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="de">
@@ -366,12 +366,10 @@
   <macro name="b__publication-statement">
     <choose>
       <if type="thesis" match="any">
-        <group delimiter=" ">
+        <group delimiter=", ">
           <text variable="genre"/>
-          <group delimiter=", ">
-            <text variable="publisher" prefix="an der "/>
-            <text variable="publisher-place"/>
-          </group>
+          <text variable="publisher"/>
+          <text variable="publisher-place"/>
         </group>
       </if>
       <else>
