@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" initialize="false" initialize-with="." name-as-sort-order="all" demote-non-dropping-particle="never" default-locale="de-AT">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.1" initialize="false" initialize-with="." name-as-sort-order="all" demote-non-dropping-particle="never" default-locale="de-AT">
   <!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
   <info>
     <title>Wirtschaftsuniversität Wien - Wirtschaftspädagogik (German - Austria)</title>
@@ -15,14 +15,13 @@
     <category citation-format="author-date"/>
     <category field="social_science"/>
     <summary>Citation style for WU Vienna’s Institute for Business Education.</summary>
-    <updated>2017-01-05T15:27:44+00:00</updated>
+    <updated>2017-01-05T15:41:14+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="de">
     <terms>
       <term name="accessed">Zugriff</term>
       <term name="et-al">et al.</term>
-      <term name="presented at">Paper präsentiert bei der</term>
       <term name="anonymous" form="long">Ohne Verfasser</term>
       <term name="anonymous" form="short">O.V.</term>
     </terms>
