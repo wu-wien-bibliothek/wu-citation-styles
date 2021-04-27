@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" name-delimiter="/" initialize="false" initialize-with="." demote-non-dropping-particle="never">
+  <!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
+  <info>
+    <title>Wirtschaftsuniversität Wien - Institute for Managing Sustainability</title>
+    <id>http://library.wu.ac.at/litverw/csl/wirtschaftsuniversitat-wien-institute-for-managing-sustainability.csl</id>
+    <link href="http://library.wu.ac.at/litverw/csl/wirtschaftsuniversitat-wien-institute-for-managing-sustainability.csl" rel="self"/>
+    <link href="http://www.zotero.org/styles/wirtschaftsuniversitat-wien-author-date" rel="independent-parent"/>
+    <link href="https://learn.wu.ac.at/bibliothek/literaturverwaltung" rel="documentation"/>
+    <author>
+      <name>Georg Mayr-Duffner</name>
+      <email>georg.mayr-duffner@wu.ac.at</email>
+      <uri>http://wu.ac.at/library</uri>
+    </author>
+    <category citation-format="author-date"/>
+    <category field="social_science"/>
+    <summary>Citation style for the Institute for Managing Sustainability at WU Vienna. This is an alias for the style Wirtschaftsuniversität Wien - APA Based (English and German).</summary>
+    <updated>2017-12-07T09:04:19+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+</style>
