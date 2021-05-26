@@ -11,14 +11,14 @@
       <email>daniel.kufner@wu.ac.at</email>
       <uri>https://www.wu.ac.at/bibliothek</uri>
     </author>
-    <contributor>
+	<contributor>
       <name>Georg Mayr-Duffner</name>
       <email>georg.mayr-duffner@wu.ac.at</email>
       <uri>https://www.wu.ac.at/bibliothek</uri>
     </contributor>
     <category citation-format="note"/>
     <category field="social_science"/>
-    <updated>2021-04-27T17:40:20+01:00</updated>
+    <updated>2021-05-26T06:26:20+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="de">
@@ -46,9 +46,6 @@
       <label form="short" prefix=" (" suffix=")"/>
       <substitute>
         <names variable="editor author"/>
-        <group>
-          <text macro="u__noauthor"/>
-        </group>
       </substitute>
     </names>
   </macro>
@@ -61,6 +58,7 @@
         <names variable="author">
           <name form="short" delimiter="/" delimiter-precedes-last="never" et-al-min="3" et-al-use-first="1" initialize-with="." name-as-sort-order="all"/>
           <substitute>
+            <names variable="editor author"/>
             <text macro="u__noauthor"/>
           </substitute>
         </names>
@@ -71,17 +69,19 @@
     <choose>
       <if type="article-newspaper legislation webpage" match="none">
         <group delimiter=" ">
-          <group delimiter=", ">
-            <choose>
-              <if match="any" is-numeric="edition">
-                <number suffix=". " variable="edition"/>
-                <text term="edition"/>
-              </if>
-              <else>
-                <text variable="edition"/>
-              </else>
-            </choose>
-            <text variable="publisher-place"/>
+          <group delimiter=" ">
+            <group>
+              <choose>
+                <if match="any" is-numeric="edition">
+                  <number suffix=". " variable="edition"/>
+                  <text term="edition" suffix=", "/>
+                </if>
+                <else>
+                  <text variable="edition"/>
+                </else>
+              </choose>
+              <text variable="publisher-place"/>
+            </group>
           </group>
           <text macro="u__issued"/>
         </group>
@@ -177,7 +177,8 @@
           <names variable="author" font-weight="bold">
             <name form="short" delimiter="/" delimiter-precedes-last="never" et-al-min="3" et-al-use-first="1" initialize-with="." name-as-sort-order="all"/>
             <substitute>
-              <text value="o.V." font-weight="bold"/>
+              <names variable="editor author"/>
+              <text macro="u__noauthor"/>
             </substitute>
           </names>
           <text macro="u__date-bold" font-weight="bold"/>
@@ -367,4 +368,3 @@
     </layout>
   </bibliography>
 </style>
-
