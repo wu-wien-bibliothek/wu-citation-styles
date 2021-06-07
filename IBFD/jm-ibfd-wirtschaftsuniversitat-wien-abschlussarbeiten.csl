@@ -14,7 +14,7 @@
     <category citation-format="note"/>
     <category field="law"/>
     <summary>IBFD Standard Citations and References. Contains off-guidlines addition of page labels as used in IBFD articles. Bibliography sorting varied for WU Vienna theses and dissertations.</summary>
-    <updated>2021-06-07T14:08:40+02:00</updated>
+    <updated>2021-06-07T15:51:37+02:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale>
@@ -772,7 +772,7 @@
       <key macro="sort-jurisdiction"/>
       <key macro="sort-no-author"/>
       <key macro="sort-author"/>
-      <key variable="issued" sort="descending"/>
+      <key variable="issued" sort="ascending"/>
       <key macro="sort-title"/>
     </sort>
     <layout>
