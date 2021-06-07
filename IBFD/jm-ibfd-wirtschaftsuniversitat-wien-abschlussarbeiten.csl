@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="note" version="1.1mlz1" et-al-min="4" et-al-use-first="1" initialize-with="." demote-non-dropping-particle="sort-only" delimiter-precedes-last="never" default-locale="en-GB">
   <info>
-    <title>JM IBFD Standard Citations and References (variant for WU Vienna dissertations)</title>
+    <title>JM IBFD Standard Citations and References (WU Vienna theses)</title>
     <id>https://juris-m.github.io/styles/jm-ibfd-wirtschaftsuniversitat-wien-abschlussarbeiten</id>
     <link href="https://juris-m.github.io/styles/jm-ibfd-wirtschaftsuniversitat-wien-abschlussarbeiten" rel="self"/>
     <link href="http://www.zotero.org/styles/bluebook-law-review" rel="template"/>
@@ -13,8 +13,8 @@
     </author>
     <category citation-format="note"/>
     <category field="law"/>
-    <summary>IBFD Standard Citations and References. Contains off-guidlines addition of page labels as used in IBFD articles. Bibliography sorting varied for WU Vienna theses and dissertations.</summary>
-    <updated>2021-06-07T15:51:37+02:00</updated>
+    <summary>IBFD Standard Citations and References. Contains off-guidlines addition of page labels as used in IBFD articles. On top of this, this style brings advanced bibliography sorting (further differentiated by item types, and different order than proposed by IBFD).</summary>
+    <updated>2021-06-07T16:01:18+02:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale>
