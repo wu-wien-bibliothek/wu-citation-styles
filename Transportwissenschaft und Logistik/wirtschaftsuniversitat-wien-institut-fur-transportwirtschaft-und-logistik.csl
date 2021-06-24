@@ -18,7 +18,7 @@
     </contributor>
     <category citation-format="note"/>
     <category field="social_science"/>
-    <updated>2021-06-15T12:15:44+02:00</updated>
+    <updated>2021-06-15T12:27:39+02:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="de">
@@ -144,7 +144,7 @@
   <macro name="b__label">
     <group delimiter=" " suffix=":">
       <text macro="u__author-short"/>
-      <text macro="u_date"/>
+      <text macro="u__date"/>
     </group>
   </macro>
   <macro name="b__collection_container">
@@ -235,13 +235,13 @@
       </else>
     </choose>
   </macro>
-  <macro name="b_locator">
+  <macro name="b__locator">
     <group delimiter=" ">
       <text term="page" form="short"/>
       <text variable="page"/>
     </group>
   </macro>
-  <macro name="u_date">
+  <macro name="u__date">
     <group prefix="(" suffix=")">
       <choose>
         <if match="any" variable="issued">
@@ -259,7 +259,7 @@
       <group delimiter=", ">
         <group delimiter=" ">
           <text macro="u__author-short"/>
-          <text macro="u_date"/>
+          <text macro="u__date"/>
         </group>
         <choose>
           <if type="broadcast post post-weblog webpage" match="any">
@@ -302,7 +302,7 @@
                 <text variable="title"/>
                 <text macro="b__collection_container"/>
                 <text macro="u__edition-publisher-place-date"/>
-                <text macro="b_locator"/>
+                <text macro="b__locator"/>
                 <text macro="b__access"/>
               </group>
             </group>
