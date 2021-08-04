@@ -646,7 +646,7 @@
       <else-if type="legal_commentary">
         <text value="40"/>
       </else-if>
-      <else-if type="webpage blog">
+      <else-if type="webpage post post-weblog">
         <text value="50"/>
       </else-if>
       <else-if type="legislation bill regulation">
