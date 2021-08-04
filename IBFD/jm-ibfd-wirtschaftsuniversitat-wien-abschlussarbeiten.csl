@@ -14,7 +14,7 @@
     <category citation-format="note"/>
     <category field="law"/>
     <summary>IBFD Standard Citations and References. Contains off-guidlines addition of page labels as used in IBFD articles. On top of this, this style brings advanced bibliography sorting (further differentiated by item types, and different order than proposed by IBFD).</summary>
-    <updated>2021-07-08T17:03:03+02:00</updated>
+    <updated>2021-08-04T22:05:58+02:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale>
@@ -477,9 +477,12 @@
   <macro name="hereinafter">
     <group delimiter=" " prefix="[hereinafter " suffix="]">
       <choose>
-        <if type="book treaty">
+        <if type="treaty">
           <text macro="title-short" font-style="italic"/>
         </if>
+        <else-if type="book chapter article-journal article-newspaper article-magazine thesis" disambiguate="true" match="all">
+          <text macro="title-short" font-style="italic"/>
+        </else-if>
         <else-if>
           <conditions>
             <condition type="report"/>
@@ -622,6 +625,22 @@
       <else>
         <group delimiter=", ">
           <text macro="short-citation-title"/>
+          <choose>
+            <if>
+              <conditions match="all">
+                <condition disambiguate="true"/>
+                <condition type="book chapter article-journal article-newspaper article-magazine thesis" match="any"/>
+              </conditions>
+              <choose>
+                <if variable="title-short hereinafter" match="any">
+                  <text macro="title-short" font-style="italic"/>
+                </if>
+                <else>
+                  <text variable="title" font-style="italic"/>
+                </else>
+              </choose>
+            </if>
+          </choose>
           <choose>
             <if type="legal_case" match="none">
               <text macro="supra-note"/>
