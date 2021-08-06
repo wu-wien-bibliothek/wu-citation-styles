@@ -14,7 +14,7 @@
     <category citation-format="note"/>
     <category field="law"/>
     <summary>IBFD Standard Citations and References. Contains off-guidlines addition of page labels as used in IBFD articles. On top of this, this style brings advanced bibliography sorting (further differentiated by item types, and different order than proposed by IBFD).</summary>
-    <updated>2021-08-04T22:05:58+02:00</updated>
+    <updated>2021-08-05T17:08:25+02:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale>
@@ -103,6 +103,12 @@
             <if country="eu.int" variable="author">
               <text macro="name-macro" prefix="Opinion of Advocate General "/>
             </if>
+            <else-if country="coe.int">
+              <names variable="authority">
+                <name/>
+                <institution form="short"/>
+              </names>
+            </else-if>
             <else>
               <names variable="authority">
                 <name/>
@@ -276,6 +282,18 @@
                     <text macro="title-italic-version"/>
                     <text macro="container"/>
                   </if>
+                  <else-if country="coe.int">
+                    <group delimiter=" ">
+                      <choose>
+                        <if is-numeric="number">
+                          <text value="no."/>
+                        </if>
+                      </choose>
+                    </group>
+                    <number variable="number"/>
+                    <text macro="title-italic-version"/>
+                    <text macro="container"/>
+                  </else-if>
                   <else-if match="any" variable="title">
                     <text macro="title-italic-version"/>
                   </else-if>
