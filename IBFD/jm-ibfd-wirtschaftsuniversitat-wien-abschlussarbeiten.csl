@@ -14,7 +14,7 @@
     <category citation-format="note"/>
     <category field="law"/>
     <summary>IBFD Standard Citations and References. Contains off-guidlines addition of page labels as used in IBFD articles. On top of this, this style brings advanced bibliography sorting (further differentiated by item types, and different order than proposed by IBFD).</summary>
-    <updated>2021-06-07T16:01:18+02:00</updated>
+    <updated>2021-08-05T17:08:25+02:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale>
@@ -41,6 +41,10 @@
       <term name="ordinal-11">th</term>
       <term name="ordinal-12">th</term>
       <term name="ordinal-13">th</term>
+      <term name="paragraph" form="short">
+        <single>para.</single>
+        <multiple>paras.</multiple>
+      </term>
       <term name="schedule" form="short">sched.</term>
       <term name="section" form="short">
         <single>sec.</single>
@@ -99,6 +103,12 @@
             <if country="eu.int" variable="author">
               <text macro="name-macro" prefix="Opinion of Advocate General "/>
             </if>
+            <else-if country="coe.int">
+              <names variable="authority">
+                <name/>
+                <institution form="short"/>
+              </names>
+            </else-if>
             <else>
               <names variable="authority">
                 <name/>
@@ -171,7 +181,7 @@
           <choose>
             <if country="eu.int" match="none">
               <group delimiter=": ">
-                <text variable="country" text-case="uppercase"/>
+                <text macro="country-code"/>
                 <group delimiter=", ">
                   <group delimiter=" ">
                     <group delimiter=", ">
@@ -272,6 +282,18 @@
                     <text macro="title-italic-version"/>
                     <text macro="container"/>
                   </if>
+                  <else-if country="coe.int">
+                    <group delimiter=" ">
+                      <choose>
+                        <if is-numeric="number">
+                          <text value="no."/>
+                        </if>
+                      </choose>
+                    </group>
+                    <number variable="number"/>
+                    <text macro="title-italic-version"/>
+                    <text macro="container"/>
+                  </else-if>
                   <else-if match="any" variable="title">
                     <text macro="title-italic-version"/>
                   </else-if>
@@ -473,13 +495,17 @@
   <macro name="hereinafter">
     <group delimiter=" " prefix="[hereinafter " suffix="]">
       <choose>
-        <if type="book treaty">
+        <if type="treaty">
           <text macro="title-short" font-style="italic"/>
         </if>
+        <else-if type="book chapter article-journal article-newspaper article-magazine thesis" disambiguate="true" match="all">
+          <text macro="title-short" font-style="italic"/>
+        </else-if>
         <else-if>
           <conditions>
             <condition type="report"/>
             <condition variable="hereinafter title-short" match="any"/>
+            <condition disambiguate="true"/>
           </conditions>
           <text macro="short-citation-title"/>
         </else-if>
@@ -619,6 +645,32 @@
         <group delimiter=", ">
           <text macro="short-citation-title"/>
           <choose>
+            <if>
+              <conditions match="all">
+                <condition disambiguate="true"/>
+                <condition type="book chapter article-journal article-newspaper article-magazine thesis" match="any"/>
+              </conditions>
+              <choose>
+                <if variable="title-short hereinafter" match="any">
+                  <text macro="title-short" font-style="italic"/>
+                </if>
+                <else>
+                  <text variable="title" font-style="italic"/>
+                </else>
+              </choose>
+            </if>
+            <else-if type="report" disambiguate="true" match="all">
+              <choose>
+                <if variable="title-short hereinafter" match="any">
+                  <text macro="title-short"/>
+                </if>
+                <else>
+                  <text variable="title"/>
+                </else>
+              </choose>
+            </else-if>
+          </choose>
+          <choose>
             <if type="legal_case" match="none">
               <text macro="supra-note"/>
             </if>
@@ -642,7 +694,7 @@
       <else-if type="legal_commentary">
         <text value="40"/>
       </else-if>
-      <else-if type="webpage blog">
+      <else-if type="webpage post post-weblog">
         <text value="50"/>
       </else-if>
       <else-if type="legislation bill regulation">
